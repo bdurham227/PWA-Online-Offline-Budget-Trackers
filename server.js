@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 
 const { MongoClient } = require('mongodb');
-const uri = process.env.MONGO_DB_URI || "mongodb+srv://admin:password12345@cluster0.49a2f.mongodb.net/Workout-Tracker?retryWrites=true&w=majority";
+const uri = process.env.MONGO_DB_URI || "mongodb+srv://admin:password12345@cluster0.49a2f.mongodb.net/Budget-Tracker?retryWrites=true&w=majority";
 const client = new MongoClient(uri, {useNewUrlParser: true, useUnifiedTopology: true})
 client.connect(err => {
   const collection = client.db("test").collection("devices");
